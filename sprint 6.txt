@@ -1,0 +1,51 @@
+kubectl get namespaces
+
+kubectl create namespace labwordpress
+
+kubectl apply -k ./ --namespace=labwordpress
+
+kubectl get all --namespace=labwordpress
+
+kubectl get secrets --namespace=labwordpress
+
+kubectl get pvc --namespace=labwordpress
+
+kubectl get pods --namespace=labwordpress
+
+kubectl get services wordpress --namespace=labwordpress
+
+minikube service wordpress --url --namespace=labwordpress /// linux
+
+kubectl -n ingress get svc wordpress --namespace=labwordpress /// windows
+
+[ localhost:80 ] - visualizar o wordpress
+
+kubectl delete -k ./ --namespace=labwordpress
+
+--------------------------------------------
+*configurando o contexto*
+
+kubectl config view
+
+kubectl config set-context labwordpress --namespace=labwordpress --user=docker-desktop --cluster=docker-desktop
+
+kubectl config view
+
+kubectl config use-context labwordpress
+
+kubectl config current-context
+
+kubectl get all
+
+
+
+
+
+
+
+
+
+
+
+
+

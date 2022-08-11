@@ -1,3 +1,5 @@
+# Comandos Úteis:
+
 kubectl get namespaces
 
 kubectl create namespace labwordpress
